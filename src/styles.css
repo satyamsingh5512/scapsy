@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 31% 96%;
+  --foreground: 194 28% 12%;
+  --border: 190 12% 82%;
+  --muted: 190 15% 42%;
+  --panel: 0 0% 100%;
+  --accent: 174 63% 35%;
+  --signal: 142 46% 36%;
+  --warning: 38 92% 50%;
+  --danger: 5 69% 52%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: hsl(var(--foreground));
+  background:
+    linear-gradient(135deg, rgba(32, 128, 121, 0.12), transparent 34%),
+    linear-gradient(180deg, #f8f3e8 0%, #eef5f1 45%, #f7f7f2 100%);
+  font-family: "IBM Plex Sans", "Aptos", "Segoe UI", sans-serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+@layer components {
+  .surface {
+    @apply border border-border bg-panel shadow-panel;
+    border-radius: 8px;
+  }
+}
